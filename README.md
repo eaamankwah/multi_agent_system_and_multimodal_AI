@@ -41,13 +41,19 @@ This project is built upon comprehensive coursework that provides deep understan
 
 ---
 
-## 🚀 Project Overview
+---
 
-### AI NourishBot: Multi-Agent Nutrition Coach
+## 🚀 Project Portfolio
+
+This repository showcases a comprehensive collection of Agentic AI projects, each demonstrating different aspects of Multi-Agent Systems and advanced AI implementation. These projects build upon the foundational coursework and represent practical applications of cutting-edge AI technologies.
+
+---
+
+## 📦 Project 1: AI NourishBot - Multi-Agent Nutrition Coach
 
 AI NourishBot is an intelligent nutrition coaching application that leverages **Multi-Agent Systems (MAS)** and **advanced multimodal AI** to provide personalized dietary guidance. This project demonstrates the practical implementation of cutting-edge Agentic AI concepts, combining computer vision, natural language processing, and intelligent decision-making in a cohesive real-world application.
 
-Built as the culmination of comprehensive Agentic AI coursework, this application showcases the integration of multiple AI agents working collaboratively to deliver sophisticated food analysis and personalized nutrition recommendations.
+## 🎯 Project 1: AI NourishBot Features
 
 ## 🎯 Key Features
 
@@ -72,7 +78,7 @@ Built as the culmination of comprehensive Agentic AI coursework, this applicatio
 * **Dual Workflow Options**: Choose between Recipe Generation or Nutritional Analysis
 * **Cross-platform Compatibility**: Works across desktop and mobile devices
 
-## 🏗️ Technical Architecture
+## 🏗️ Project 1: Technical Architecture
 
 ### **Multi-Agent System Design**
 ```
@@ -125,7 +131,7 @@ This project is built upon comprehensive coursework in **Introduction to Agentic
 * Orchestrator agent design patterns
 * Risk assessment and mitigation in Agentic AI
 
-## 🛠️ Installation & Setup
+## 🛠️ Project 1: Installation & Setup
 
 ### Prerequisites
 ```bash
@@ -155,7 +161,7 @@ MODEL_ENDPOINT = "your-llama-endpoint"
 API_KEY = "your-api-key"
 ```
 
-## 📖 Usage Guide
+## 📖 Project 1: Usage Guide
 
 ### **Recipe Workflow**
 1. Upload a food image
@@ -169,6 +175,63 @@ API_KEY = "your-api-key"
 3. Get comprehensive nutritional breakdown and health insights
 
 ## 🎯 Capabilities Demonstrated
+
+### **Advanced AI Integration**
+* **Multimodal Processing**: Seamless handling of visual and textual data
+* **Agent Collaboration**: Sophisticated inter-agent communication protocols
+* **Dynamic Decision Making**: Context-aware response generation
+
+### **Real-World Application**
+* **Practical Problem Solving**: Addresses genuine dietary management challenges
+* **User Experience Focus**: Intuitive interface design with professional polish
+* **Scalable Architecture**: Designed for potential cloud deployment and broader accessibility
+
+### **Technical Proficiency**
+* **Modern AI Frameworks**: Implementation of state-of-the-art AI technologies
+* **System Architecture**: Well-structured, maintainable codebase
+* **Integration Skills**: Successful combination of multiple complex technologies
+
+## 📦 Project 2: CrewAI Content Creation Pipeline
+
+A sophisticated **GenAI-powered content creation system** that transforms raw research into polished, insightful blog posts through collaborative agent workflows. This project demonstrates advanced **CrewAI framework implementation**, featuring a sequential multi-agent process where specialized agents work together autonomously to create high-quality content.
+
+## 🎯 Project 2: Key Components
+
+### **Multi-Agent Architecture**
+* **Research Analyst Agent**: Leverages SerperDev API for real-time web search and cutting-edge information gathering
+* **Content Strategist Agent**: Transforms technical research into engaging, audience-ready content  
+* **Social Media Strategist Agent**: Creates platform-specific promotional content for content amplification
+* **Sequential Workflow**: Demonstrates agent collaboration without manual intervention
+
+### **Technical Implementation**
+* **CrewAI Framework**: Professional multi-agent orchestration using Meta Llama 3.3 70B Instruct
+* **Real-time Data Integration**: SerperDev Google Search API for current information access
+* **Token Usage Analytics**: Performance monitoring and cost optimization
+* **Dynamic Task Management**: Flexible topic-based content generation system
+
+### **Advanced Features**
+* **Autonomous Collaboration**: Agents work together without manual intervention
+* **Research-to-Content Pipeline**: Complete automation from data gathering to publication-ready content
+* **Platform-Specific Output**: Tailored content for different distribution channels
+* **Performance Monitoring**: Comprehensive analytics and resource tracking
+
+## 🛠️ Project 2: Technical Stack
+
+### **Core Technologies**
+* **Framework**: CrewAI 0.80.0 for multi-agent orchestration
+* **LLM**: Meta Llama 3.3 70B Instruct for content generation
+* **Search Integration**: SerperDev Google Search API for real-time information
+* **Supporting Libraries**: LangChain 0.3.20, LangChain-Community 0.3.19
+
+### **Agent Capabilities**
+* **Tool Integration**: Seamless external API utilization
+* **Task Coordination**: Sequential and hierarchical workflow management
+* **Content Quality**: Professional-grade output generation
+* **Scalability**: Modular architecture for easy expansion
+
+This project showcases enterprise-level content automation capabilities and demonstrates proficiency in modern AI agent frameworks for scalable workflow automation.
+
+## 🎯 Portfolio Capabilities Demonstrated
 
 ### **Advanced AI Integration**
 * **Multimodal Processing**: Seamless handling of visual and textual data
@@ -209,7 +272,7 @@ This project represents the successful integration of:
 * **Practical Application Development**: Real-world problem-solving
 * **User Experience Excellence**: Intuitive interface design
 
-AI NourishBot showcases the transformative potential of Agentic AI in creating intelligent, personalized solutions for everyday challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
+AI NourishBot and CrewAI Content Creation Pipeline showcase the transformative potential of Agentic AI in creating intelligent, personalized solutions for everyday challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
 
 ---
 
