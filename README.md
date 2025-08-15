@@ -204,6 +204,79 @@ def add_numbers(inputs: str) -> dict:
 
 ---
 
+## 📦 Project 4: Manual Tool-Calling Agent - Advanced YouTube Analytics System
+
+A comprehensive **YouTube interaction system** that demonstrates sophisticated tool calling capabilities with LangChain. This project showcases both manual and automated tool calling approaches, featuring custom YouTube tools for video analysis, content extraction, and intelligent summarization through recursive agent workflows.
+
+### 🎯 Project 4: Key Features
+
+#### 🔧 **Advanced Tool Architecture**
+* **Custom Tool Creation**: Implements YouTube-specific tools using LangChain's `@tool` decorator
+* **Video ID Extraction**: Intelligent parsing of various YouTube URL formats (standard, shortened, embedded)
+* **Transcript Fetching**: Automated caption retrieval with multi-language support
+* **Metadata Extraction**: Comprehensive video information including views, duration, likes, comments, and chapters
+* **Search Integration**: Real-time YouTube search capabilities with result filtering
+
+#### 🔄 **Manual vs Automated Tool Calling**
+* **Manual Process Demonstration**: Step-by-step tool calling with explicit state management
+* **Chain Automation**: Streamlined workflow using LangChain's chain functionality
+* **Recursive Processing**: Dynamic tool calling that adapts to query complexity
+* **Tool Call Orchestration**: Intelligent selection and sequencing of multiple tools
+
+#### 🎬 **YouTube-Specific Capabilities**
+* **Trending Videos Analysis**: Regional trending content discovery with metadata extraction
+* **Thumbnail Retrieval**: Complete thumbnail collection across all available resolutions
+* **Multi-language Support**: Transcript fetching in various language codes
+* **Content Summarization**: AI-powered video content analysis and summary generation
+
+#### 🔗 **Intelligent Workflow Management**
+* **Sequential Chains**: Fixed-step workflows for predictable tool calling patterns
+* **Recursive Chains**: Dynamic workflows that adapt to varying complexity requirements
+* **State Management**: Comprehensive conversation history tracking with tool call linking
+* **Error Handling**: Robust exception handling and graceful degradation
+
+### 🗏️ Project 4: Technical Implementation
+
+#### **Tool Ecosystem Architecture**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│  Video ID Tool  │    │ Transcript Tool │    │  Metadata Tool  │
+│                 │    │                 │    │                 │
+│ • URL Parsing   │    │ • Multi-lang    │    │ • Views/Likes   │
+│ • Format Handle │    │ • Caption Fetch │    │ • Duration      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 │
+    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+    │   Search Tool   │    │ Trending Tool   │    │ Thumbnail Tool  │
+    │                 │    │                 │    │                 │
+    │ • Query Search  │    │ • Regional Data │    │ • Multi-res     │
+    │ • Result Filter │    │ • Top Videos    │    │ • URL Extract   │
+    └─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+#### **Recursive Chain Flow**
+* **Dynamic Decision Making**: LLM-driven tool selection based on query context
+* **Tool Call Execution**: Parallel processing of multiple tool requests
+* **State Preservation**: Comprehensive conversation history with tool call linking
+* **Termination Logic**: Intelligent stopping conditions for workflow completion
+
+#### **Technology Stack**
+* **Core Framework**: LangChain 0.3.23 for tool orchestration and chaining
+* **LLM Integration**: OpenAI GPT-4o-mini for intelligent tool selection
+* **YouTube Libraries**: PyTube, yt-dlp, youtube-transcript-api for comprehensive video access
+* **Data Processing**: JSON handling, regex parsing, and structured data extraction
+* **Chain Architecture**: RunnablePassthrough, RunnableLambda for workflow automation
+
+#### **Advanced Features**
+* **Tool Mapping System**: Dynamic tool lookup and execution architecture
+* **Message History Management**: Complete conversation context preservation
+* **Parallel Tool Execution**: Efficient processing of multiple simultaneous tool calls
+* **Universal Query Handling**: Adaptable system for diverse YouTube-related requests
+
+---
+
 ## 🎯 Portfolio Capabilities Demonstrated
 
 ### **Advanced AI Integration**
@@ -233,7 +306,6 @@ def add_numbers(inputs: str) -> dict:
 ## 🚀 Future Enhancements & Project Expansion
 
 ### **Planned Projects**
-* **Project 4**: Build and Execute Custom Tools for LLMs
 * **Project 5**: Simple ReAct Agent from Scratch
 * **Project 6**: Agentic AI Workflow Design Patterns with LangGraph
 * **Project 7**: MultiAgent Healthcare Chatbot with AG2
@@ -255,7 +327,7 @@ This expanding portfolio represents the successful integration of:
 * **Practical Application Development**: Real-world problem-solving across multiple domains
 * **User Experience Excellence**: Intuitive interface design and professional implementation
 
-The AI NourishBot, CrewAI Content Creation Pipeline, and AI Math Assistant projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
+The AI NourishBot, CrewAI Content Creation Pipeline, AI Math Assistant, and Manual Tool-Calling Agent projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
 
 ---
 
