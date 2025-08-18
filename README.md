@@ -277,6 +277,105 @@ A comprehensive **YouTube interaction system** that demonstrates sophisticated t
 
 ---
 
+## 📦 Project 5: Simple ReAct Agent - From Scratch Implementation
+
+A comprehensive implementation of the **ReAct (Reasoning + Acting) framework** built from the ground up using LangGraph. This project demonstrates the fundamental principles of agentic AI by creating an intelligent assistant that thinks step-by-step, uses tools strategically, and adapts its approach based on intermediate results.
+
+### 🎯 Project 5: Key Features
+
+#### 🧠 **ReAct Framework Implementation**
+* **Think → Act → Observe Loop**: Complete implementation of the ReAct reasoning pattern
+* **Step-by-Step Reasoning**: Transparent decision-making process with explanation of thought patterns
+* **Dynamic Tool Selection**: Intelligent choice of appropriate tools based on query context
+* **Adaptive Problem Solving**: Ability to adjust approach based on intermediate results
+
+#### 🛠️ **Comprehensive Tool Ecosystem**
+* **Web Search Integration**: Real-time information retrieval using Tavily Search API
+* **Clothing Recommendation System**: Weather-based clothing suggestions with intelligent parsing
+* **Advanced Calculator Tool**: Safe mathematical expression evaluation with comprehensive function support
+* **News Summarization Engine**: Multi-article parsing, analysis, and intelligent summarization
+
+#### 📊 **State Management Architecture**
+* **Conversation State Tracking**: Complete message history preservation using LangGraph reducers
+* **Tool Call Integration**: Seamless integration of tool results into conversation context
+* **Error Handling**: Robust exception management and graceful degradation
+* **Manual vs Automated Execution**: Demonstrates both manual step-through and automated graph execution
+
+#### 🔗 **Graph-Based Automation**
+* **State Graph Implementation**: Professional workflow automation using LangGraph StateGraph
+* **Conditional Logic**: Intelligent routing between reasoning and acting phases
+* **Visual Workflow Representation**: Mermaid diagram generation for workflow visualization
+* **Streaming Execution**: Real-time response generation with step-by-step visibility
+
+### 🏗️ Project 5: Technical Architecture
+
+#### **ReAct Cycle Flow**
+```
+┌─────────────────┐
+│  User Query     │
+│  Processing     │
+└─────────────────┘
+         │
+         ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Agent Node    │───▶│  Tool Decision  │───▶│   Tools Node    │
+│                 │    │                 │    │                 │
+│ • Query Analysis│    │ • Continue?     │    │ • Tool Exec     │
+│ • Tool Selection│    │ • End?          │    │ • Result Format │
+│ • Response Gen  │    │                 │    │ • State Update  │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         ▲                       │                       │
+         │                       ▼                       │
+         │              ┌─────────────────┐              │
+         └──────────────│      END        │              │
+                        │                 │              │
+                        │ • Final Answer  │              │
+                        └─────────────────┘              │
+                                 ▲                       │
+                                 └───────────────────────┘
+```
+
+#### **Advanced Tool Implementation**
+* **Safe Expression Evaluation**: AST-based mathematical parsing with security constraints
+* **Multi-format News Processing**: Support for both text and JSON-formatted news content
+* **Weather-Clothing Intelligence**: Context-aware recommendations based on weather conditions
+* **Extensible Tool Registry**: Dynamic tool discovery and invocation system
+
+#### **Manual Execution Demonstration**
+* **Educational Step-Through**: Complete manual execution showing each ReAct cycle
+* **State Inspection**: Detailed examination of conversation state at each step
+* **Tool Call Analysis**: Breakdown of tool selection, execution, and result processing
+* **Learning-Focused Design**: Clear explanations of ReAct principles throughout
+
+### 🧪 Project 5: Comprehensive Testing Suite
+
+#### **Calculator Tool Validation**
+* **30+ Test Cases**: Comprehensive validation of mathematical operations
+* **Security Testing**: Verification of safe evaluation practices
+* **Error Handling**: Division by zero, invalid functions, and syntax error management
+* **Function Coverage**: Support for trigonometric, logarithmic, and advanced mathematical functions
+
+#### **News Processing Capabilities**
+* **Multi-article Parsing**: Intelligent separation and processing of multiple news articles
+* **Metadata Extraction**: Automatic detection of titles, dates, sources, and URLs
+* **Intelligent Summarization**: Key information extraction with scoring algorithms
+* **Format Flexibility**: Support for various news content formats and structures
+
+#### **Technology Stack**
+* **Core Framework**: LangGraph 0.3.34 for state management and workflow automation
+* **LLM Integration**: OpenAI GPT-4o-mini for reasoning and natural language processing
+* **Search API**: Tavily Search API for real-time web information retrieval
+* **Safety Libraries**: AST module for secure code evaluation and mathematical processing
+* **Visualization**: Pygraphviz for workflow diagram generation and analysis
+
+#### **Educational Value**
+* **From-Scratch Implementation**: Complete ReAct framework built without high-level abstractions
+* **Detailed Documentation**: Comprehensive explanations of ReAct principles and implementation
+* **Progressive Complexity**: Builds understanding from basic concepts to advanced implementations
+* **Practical Applications**: Real-world problem-solving across multiple domains
+
+---
+
 ## 🎯 Portfolio Capabilities Demonstrated
 
 ### **Advanced AI Integration**
@@ -306,7 +405,6 @@ A comprehensive **YouTube interaction system** that demonstrates sophisticated t
 ## 🚀 Future Enhancements & Project Expansion
 
 ### **Planned Projects**
-* **Project 5**: Simple ReAct Agent from Scratch
 * **Project 6**: Agentic AI Workflow Design Patterns with LangGraph
 * **Project 7**: MultiAgent Healthcare Chatbot with AG2
 * **Project 8**: Customer Support Agent with PydanticAI
@@ -327,7 +425,7 @@ This expanding portfolio represents the successful integration of:
 * **Practical Application Development**: Real-world problem-solving across multiple domains
 * **User Experience Excellence**: Intuitive interface design and professional implementation
 
-The AI NourishBot, CrewAI Content Creation Pipeline, AI Math Assistant, and Manual Tool-Calling Agent projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
+The AI NourishBot, CrewAI Content Creation Pipeline, AI Math Assistant, Manual Tool-Calling Agent, and Simple ReAct Agent projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
 
 ---
 
