@@ -376,6 +376,108 @@ A comprehensive implementation of the **ReAct (Reasoning + Acting) framework** b
 
 ---
 
+## 📦 Project 6: LangGraph Workflow Patterns - Advanced Agent Orchestration
+
+A comprehensive implementation of **essential workflow design patterns** using LangGraph and LangChain that demonstrates the three fundamental approaches to multi-agent coordination: **Sequential Agent Coordination**, **Intent-Based Routing**, and **Parallel Agent Execution**. This project showcases how individual AI models can be orchestrated into sophisticated, coordinated systems that solve complex real-world problems.
+
+### 🎯 Project 6: Key Features
+
+#### 🔄 **Sequential Agent Coordination (Prompt Chaining)**
+* **Job Application Assistant**: End-to-end workflow from job description analysis to personalized cover letter generation
+* **Resume Summary Agent**: Intelligent extraction of key qualifications tailored to specific job requirements
+* **Cover Letter Generator**: Professional document creation using resume summary and job description synthesis
+* **State Management**: Robust data flow between sequential processing stages using TypedDict structures
+
+#### 🎯 **Intent-Based Routing System**
+* **Intelligent Task Classification**: LLM-powered routing that analyzes user intent and directs to specialized processing paths
+* **Multi-Domain Support**: Handles summarization, translation, and general query processing through dedicated agents
+* **Dynamic Decision Making**: Real-time classification and routing based on natural language understanding
+* **Conditional Logic**: Advanced LangGraph conditional edges for seamless workflow branching
+
+#### ⚡ **Parallel Agent Execution**
+* **Multilingual Translation Engine**: Simultaneous translation into French, Spanish, and Japanese
+* **Concurrent Processing**: Independent task execution with synchronized result aggregation
+* **Efficiency Optimization**: Demonstrates significant performance improvements through parallel execution
+* **Resource Coordination**: Intelligent management of multiple LLM calls and result consolidation
+
+### 🏗️ Project 6: Technical Architecture
+
+#### **Workflow Pattern Implementation**
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    WORKFLOW PATTERNS                            │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  ┌─────────────┐    ┌─────────────┐    ┌─────────────┐         │
+│  │  SEQUENTIAL │    │   ROUTING   │    │  PARALLEL   │         │
+│  │   CHAINING  │    │   PATTERN   │    │  EXECUTION  │         │
+│  │             │    │             │    │             │         │
+│  │ Job Desc    │    │ Intent      │    │ Multi-lang  │         │
+│  │     ▼       │    │ Classifier  │    │ Translation │         │
+│  │ Resume Sum  │    │     ▼       │    │     ▼       │         │
+│  │     ▼       │    │ Task Router │    │ French ||   │         │
+│  │ Cover Letter│    │     ▼       │    │ Spanish||   │         │
+│  │             │    │ Specialized │    │ Japanese    │         │
+│  │             │    │ Processor   │    │     ▼       │         │
+│  │             │    │             │    │ Aggregator  │         │
+│  └─────────────┘    └─────────────┘    └─────────────┘         │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### 🛠️ Project 6: Advanced Implementation Features
+
+#### **Multi-Agent Service Router**
+* **Comprehensive Service Classification**: Intelligent routing between ride hailing, restaurant orders, grocery delivery, and default handling
+* **Pydantic Tool Integration**: Structured classification using Pydantic BaseModel for reliable intent detection
+* **Error Handling & Fallbacks**: Graceful degradation when classification is uncertain with default handler routing
+* **Service-Specific Processing**: Specialized agents for each service type with domain-specific prompts and output formatting
+
+#### **State Management Excellence**
+* **TypedDict Architecture**: Strongly-typed state definitions ensuring data integrity across workflow stages
+* **State Evolution Tracking**: Clear documentation of how state transforms through each processing step
+* **Memory Preservation**: Comprehensive conversation history and intermediate result storage
+* **Cross-Pattern Consistency**: Unified state management approach across all three workflow patterns
+
+#### **Educational Implementation**
+* **Step-by-Step Demonstrations**: Detailed walkthroughs of each pattern with clear explanations
+* **Visual Workflow Diagrams**: Comprehensive graph visualizations showing node connections and data flow
+* **Practical Examples**: Real-world use cases including job applications, task routing, and multilingual processing
+* **Progressive Complexity**: Building from simple chaining to advanced parallel processing concepts
+
+### 🧪 Project 6: Comprehensive Demonstration
+
+#### **Job Application Workflow Testing**
+* **Multi-Stage Validation**: Testing complete pipeline from job description input to cover letter generation
+* **Professional Output Quality**: Ensuring generated content meets professional standards
+* **Context Preservation**: Validating information flow between resume summary and cover letter creation
+* **Customization Flexibility**: Demonstrating adaptation to different job types and requirements
+
+#### **Routing System Validation**
+* **Intent Classification Accuracy**: Testing correct routing across multiple request types
+* **Edge Case Handling**: Validation of default handler for ambiguous or unrecognized requests
+* **Service-Specific Processing**: Ensuring appropriate handling for ride hailing, restaurant, and grocery requests
+* **Response Quality**: Verifying specialized agent outputs meet service-specific requirements
+
+#### **Parallel Processing Performance**
+* **Execution Time Optimization**: Demonstrating performance improvements through concurrent processing
+* **Result Synchronization**: Ensuring all parallel tasks complete before aggregation
+* **Quality Consistency**: Validating translation quality across all target languages
+* **Scalability Demonstration**: Showing how pattern extends to additional parallel tasks
+
+### 💼 Project 6: Real-World Applications
+
+#### **Enterprise Workflow Automation**
+* **Document Processing Pipelines**: Sequential workflows for automated document generation and processing
+* **Customer Service Routing**: Intent-based routing for multi-department customer support systems
+* **Content Localization**: Parallel processing for simultaneous multi-language content creation
+* **Business Process Optimization**: Demonstrating efficiency gains through intelligent workflow design
+
+#### **Technology Integration**
+* **LangGraph StateGraph**: Advanced workflow orchestration with conditional routing and parallel execution
+* **OpenAI GPT-4o-mini**: Consistent LLM integration across all workflow patterns
+* **Pydantic Validation**: Structured data validation for reliable multi-agent communication
+* **Visual Workflow Analysis**: PNG graph generation for workflow visualization and debugging
+
 ## 🎯 Portfolio Capabilities Demonstrated
 
 ### **Advanced AI Integration**
@@ -405,7 +507,6 @@ A comprehensive implementation of the **ReAct (Reasoning + Acting) framework** b
 ## 🚀 Future Enhancements & Project Expansion
 
 ### **Planned Projects**
-* **Project 6**: Agentic AI Workflow Design Patterns with LangGraph
 * **Project 7**: MultiAgent Healthcare Chatbot with AG2
 * **Project 8**: Customer Support Agent with PydanticAI
 * **Project 9**: Document Chat via Agentic RAG
@@ -425,7 +526,7 @@ This expanding portfolio represents the successful integration of:
 * **Practical Application Development**: Real-world problem-solving across multiple domains
 * **User Experience Excellence**: Intuitive interface design and professional implementation
 
-The AI NourishBot, CrewAI Content Creation Pipeline, AI Math Assistant, Manual Tool-Calling Agent, and Simple ReAct Agent projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
+The AI NourishBot, CrewAI Content Creation Pipeline, AI Math Assistant, Manual Tool-Calling Agent, Simple ReAct Agent, and LangGraph Workflow Patterns projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
 
 ---
 
