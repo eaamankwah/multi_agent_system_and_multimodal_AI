@@ -478,6 +478,131 @@ A comprehensive implementation of **essential workflow design patterns** using L
 * **Pydantic Validation**: Structured data validation for reliable multi-agent communication
 * **Visual Workflow Analysis**: PNG graph generation for workflow visualization and debugging
 
+---
+
+## 📦 Project 7: AutoMed - Multi-Agent Healthcare Chatbot with AG2 AutoGen
+
+AutoMed represents a sophisticated **multi-agent healthcare consultation system** powered by AG2 (AutoGen) that simulates expert medical consultation through intelligent agent collaboration. Unlike traditional single-agent chatbots, AutoMed orchestrates multiple specialized AI agents that work together as a coordinated medical team, providing comprehensive, context-aware healthcare guidance through structured multi-agent communication patterns.
+
+### 🎯 Project 7: Key Features
+
+#### 🏥 **Multi-Agent Medical Team Architecture**
+* **Specialized Agent Roles**: Four distinct agents each handling specific aspects of medical consultation
+* **Patient Agent**: Collects user symptoms, medical history, and treatment information
+* **Diagnosis Agent**: Analyzes symptoms using AI-driven medical knowledge for condition assessment
+* **Pharmacy Agent**: Provides medication recommendations and over-the-counter treatment suggestions
+* **Consultation Advisor Agent**: Determines necessity for professional medical intervention and provides final summary
+
+#### 🤖 **AG2 AutoGen Framework Implementation**
+* **ConversableAgent Integration**: Leverages AutoGen's conversational AI agents with role-specific system messages
+* **GroupChat Orchestration**: Structured multi-agent communication using round-robin speaker selection
+* **GroupChatManager Coordination**: Centralized conversation management with turn-based interaction control
+* **Intelligent Workflow Termination**: Automated conversation completion with "CONSULTATION_COMPLETE" signals
+
+#### 🔄 **Advanced Conversation Management**
+* **Structured Communication Flow**: Logical progression from symptom analysis to treatment recommendations
+* **Turn-Based Interaction**: Round-robin speaker selection preventing chaotic agent communication
+* **Conversation Limiting**: Maximum round restrictions (5 rounds) to prevent infinite loops
+* **State Preservation**: Comprehensive message history tracking throughout consultation process
+
+#### 🧠 **Real-Time Medical Intelligence**
+* **GPT-4o Integration**: Advanced language model capabilities for accurate medical reasoning
+* **Context-Aware Analysis**: Symptom evaluation considering user's complete medical context
+* **Professional-Grade Responses**: Medical terminology and structured consultation format
+* **Dynamic Decision Making**: Adaptive responses based on symptom complexity and urgency
+
+### 🗃️ Project 7: Technical Architecture
+
+#### **Multi-Agent Communication Flow**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Patient Agent │    │ Diagnosis Agent │    │ Pharmacy Agent  │
+│                 │    │                 │    │                 │
+│ • Symptom Input │    │ • Condition     │    │ • Medication    │
+│ • History Gather│    │   Analysis      │    │   Suggestions   │
+│ • Initial Query │    │ • Medical       │    │ • OTC Options   │
+│                 │    │   Knowledge     │    │ • Safety Checks │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 │
+                    ┌─────────────────┐
+                    │ Consultation    │
+                    │ Advisor Agent   │
+                    │                 │
+                    │ • Visit Decision│
+                    │ • Final Summary │
+                    │ • Next Steps    │
+                    │ • Completion    │
+                    └─────────────────┘
+```
+
+#### **GroupChat Management System**
+* **Round-Robin Speaker Selection**: Ensures each agent contributes in logical sequence
+* **Message Flow Control**: Structured conversation progression with clear agent transitions
+* **Termination Logic**: Intelligent conversation completion based on consultation advisor signals
+* **Error Prevention**: Maximum round limits and conversation state validation
+
+### 🛠️ Project 7: Implementation Highlights
+
+#### **Agent Role Specialization**
+* **System Message Configuration**: Each agent receives specific role definitions and behavior guidelines
+* **Response Limitation**: Strategic "respond once" constraints for pharmacy and consultation agents
+* **Collaborative Intelligence**: Agents build upon each other's responses for comprehensive consultation
+* **Professional Standards**: Medical consultation format with appropriate disclaimers and safety measures
+
+#### **Healthcare-Specific Features**
+* **Symptom Analysis Pipeline**: Structured approach to medical symptom evaluation
+* **Treatment Recommendation Engine**: Evidence-based medication and care suggestions
+* **Risk Assessment**: Intelligent evaluation of when professional medical attention is required
+* **Safety Protocols**: Built-in disclaimers and emphasis on professional medical consultation
+
+#### **Interactive User Experience**
+* **Command-Line Interface**: Simple, accessible input system for symptom description
+* **Real-Time Processing**: Immediate multi-agent analysis and response generation
+* **Structured Output**: Clear, organized consultation results with actionable recommendations
+* **Educational Transparency**: Visible agent collaboration process for learning purposes
+
+### 📋 Project 7: Safety and Compliance
+
+#### **Medical Disclaimer Integration**
+* **Professional Consultation Emphasis**: Clear guidance that AI advice supplements, not replaces, medical professionals
+* **Liability Protection**: Appropriate disclaimers regarding AI-generated medical information
+* **Safety First Approach**: Conservative recommendations with emphasis on seeking professional care
+* **Educational Purpose**: Framework designed for learning AG2 AutoGen capabilities, not medical practice
+
+#### **Ethical AI Implementation**
+* **Responsible Medical AI**: Careful consideration of healthcare AI ethics and limitations
+* **Transparency**: Clear indication of AI-driven recommendations versus professional medical advice
+* **User Safety**: Conservative approach prioritizing user safety over convenience
+* **Professional Standards**: Implementation following best practices for healthcare AI applications
+
+### 🔧 Project 7: Technology Stack
+
+#### **Core Technologies**
+* **Framework**: AG2 (AutoGen) 0.7 for multi-agent orchestration and conversation management
+* **LLM Integration**: OpenAI GPT-4o for advanced natural language understanding and medical reasoning
+* **State Management**: AutoGen's built-in conversation state tracking and message history preservation
+* **Environment Management**: Python-dotenv for secure API key handling and configuration management
+
+#### **Advanced AutoGen Features**
+* **ConversableAgent**: Individual agent creation with role-specific system messages and LLM configurations
+* **GroupChat**: Multi-agent conversation coordination with speaker selection and round management
+* **GroupChatManager**: Central orchestration system for complex multi-agent workflows
+* **Dynamic Workflow Control**: Conditional conversation flow based on agent responses and termination signals
+
+#### **Educational Value**
+* **AG2 AutoGen Mastery**: Comprehensive demonstration of Microsoft's multi-agent framework capabilities
+* **Healthcare AI Application**: Real-world implementation showing practical benefits of multi-agent systems
+* **Collaborative Intelligence**: Understanding how multiple AI agents can work together more effectively than single agents
+* **Framework Comparison**: Clear illustration of AutoGen advantages over traditional single-agent approaches
+
+#### **Extension Capabilities**
+* **Mental Health Chatbot Exercise**: Additional implementation demonstrating emotion analysis and therapy recommendation agents
+* **Scalable Architecture**: Framework design supporting addition of new specialized agents
+* **Integration Potential**: Foundation for connecting with external healthcare APIs and databases
+* **Customization Options**: Flexible agent role definitions for different medical specializations
+
 ## 🎯 Portfolio Capabilities Demonstrated
 
 ### **Advanced AI Integration**
@@ -507,7 +632,6 @@ A comprehensive implementation of **essential workflow design patterns** using L
 ## 🚀 Future Enhancements & Project Expansion
 
 ### **Planned Projects**
-* **Project 7**: MultiAgent Healthcare Chatbot with AG2
 * **Project 8**: Customer Support Agent with PydanticAI
 * **Project 9**: Document Chat via Agentic RAG
 
@@ -526,7 +650,7 @@ This expanding portfolio represents the successful integration of:
 * **Practical Application Development**: Real-world problem-solving across multiple domains
 * **User Experience Excellence**: Intuitive interface design and professional implementation
 
-The AI NourishBot, CrewAI Content Creation Pipeline, AI Math Assistant, Manual Tool-Calling Agent, Simple ReAct Agent, and LangGraph Workflow Patterns projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
+The AI NourishBot, CrewAI Content Creation Pipeline, AI Math Assistant, Manual Tool-Calling Agent, Simple ReAct Agent, LangGraph Workflow Patterns and multiagent healhcare chatbot projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
 
 ---
 
