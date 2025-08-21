@@ -727,6 +727,153 @@ agent = Agent[SupportResponse](
 * **Extensibility Demonstration**: Concrete examples of extending basic agents to complex multi-modal applications
 
 ---
+
+## 📦 Project 9: DocChat - Agentic RAG Document Intelligence System
+
+DocChat represents a revolutionary approach to **document intelligence** through a multi-agent Retrieval-Augmented Generation (RAG) system. Unlike traditional chatbots that hallucinate responses, DocChat implements a sophisticated verification and self-correction framework using LangGraph, Docling, and advanced hybrid retrieval techniques to provide reliable, fact-based answers from complex document collections.
+
+### 🎯 Project 9: Key Features
+
+#### 🔍 **Hybrid Retrieval Architecture**
+* **BM25 + Vector Search Integration**: Combines keyword-based and semantic search for comprehensive document retrieval
+* **Multi-Document Processing**: Seamlessly handles queries across multiple document sources simultaneously  
+* **Structured Data Extraction**: Intelligent parsing of tables, figures, and complex document layouts using Docling
+* **ChromaDB Vector Store**: Efficient vector storage and similarity search for large document collections
+
+#### 🤖 **Multi-Agent Intelligence System**
+* **Hybrid Retriever Agent**: Orchestrates BM25 and vector search to identify relevant document sections
+* **Research Agent**: Analyzes retrieved content and generates structured, contextual answers
+* **Verification Agent**: Cross-checks generated responses against source documents to prevent hallucinations
+* **Self-Correction Mechanism**: Automatically reruns research process when verification fails
+
+#### 📚 **Advanced Document Processing**
+* **Docling PDF Extraction**: State-of-the-art structured text extraction from complex PDFs
+* **Multi-Format Support**: Handles various document types including contracts, reports, technical papers
+* **Table and Figure Recognition**: Intelligent interpretation of structured data within documents
+* **Content Preservation**: Maintains document hierarchy and context during extraction process
+
+#### 🌐 **Interactive Web Interface**
+* **Gradio Web UI**: User-friendly interface for document upload and query interaction
+* **Real-Time Processing**: Immediate response generation with progress indicators
+* **Multi-Document Chat**: Conversational interface supporting queries across document collections
+* **Response Verification Display**: Transparent showing of verification results and confidence levels
+
+### 🗃️ Project 9: Technical Architecture
+
+#### **Multi-Agent Workflow**
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   User Query    │    │ Document Upload │    │  Docling Parse  │
+│   Processing    │    │   & Indexing    │    │   & Structure   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         ▼                       ▼                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│ Hybrid Retriever│    │  Research Agent │    │Verification Agnt│
+│                 │    │                 │    │                 │
+│ • BM25 Search   │    │ • Query Analysis│    │ • Fact Checking │
+│ • Vector Search │────│ • Answer Gen    │────│ • Hallucination │
+│ • Result Fusion │    │ • Context Build │    │   Detection     │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         │                       │                       │
+         └───────────────────────┼───────────────────────┘
+                                 ▼
+                    ┌─────────────────┐
+                    │ Self-Correction │
+                    │    Mechanism    │
+                    │                 │
+                    │ • Retry Logic   │
+                    │ • Quality Check │
+                    │ • Final Answer  │
+                    └─────────────────┘
+```
+
+### 🛠️ Project 9: Advanced Implementation
+
+#### **LangGraph Workflow Orchestration**
+* **StateGraph Architecture**: Complex multi-agent workflow management using LangGraph's state machine
+* **Conditional Routing**: Intelligent routing between research and verification phases based on quality assessment  
+* **Error Recovery**: Robust handling of retrieval failures and verification rejections
+* **Workflow Visualization**: Comprehensive graph representations of agent interactions and decision paths
+
+#### **Hybrid Retrieval System**
+* **BM25 Keyword Matching**: Traditional information retrieval for exact term matching and keyword queries
+* **Dense Vector Retrieval**: Semantic similarity search using modern embedding models for contextual understanding
+* **Retrieval Fusion**: Advanced combination strategies for merging keyword and semantic search results
+* **Relevance Scoring**: Intelligent ranking system combining multiple retrieval signals for optimal results
+
+#### **Self-Correction Framework**
+* **Response Verification**: Systematic fact-checking of generated answers against source documents
+* **Hallucination Detection**: Advanced detection mechanisms for identifying fabricated or unsupported claims
+* **Quality Assessment**: Multi-dimensional evaluation of answer accuracy, completeness, and relevance
+* **Iterative Improvement**: Automatic refinement process when initial responses fail verification
+
+#### **Production-Ready Features**
+* **Scalable Architecture**: Designed for handling large document collections and concurrent user queries
+* **Error Handling**: Comprehensive exception management and graceful degradation
+* **Performance Optimization**: Efficient indexing and retrieval strategies for fast response times
+* **Security Considerations**: Safe document handling and user data protection protocols
+
+### 🧪 Project 9: Use Case Applications
+
+#### **Enterprise Document Intelligence**
+* **Legal Document Analysis**: Contract review, compliance checking, and legal research assistance
+* **Financial Report Processing**: Automated analysis of financial statements, SEC filings, and investment reports
+* **Technical Documentation**: Engineering specifications, API documentation, and technical manual querying
+* **Research Paper Analysis**: Academic research, literature reviews, and scientific document exploration
+
+#### **Business Intelligence Applications**
+* **Policy and Procedure Queries**: Employee handbook searches and corporate policy clarification
+* **Regulatory Compliance**: Automated compliance checking against regulatory documents
+* **Knowledge Management**: Enterprise knowledge base querying and information retrieval
+* **Due Diligence**: Automated document analysis for mergers, acquisitions, and investment decisions
+
+### 💼 Project 9: Real-World Impact
+
+#### **Problem Solving Capabilities**
+* **Hallucination Prevention**: Unlike general-purpose LLMs, DocChat provides verifiable, source-backed answers
+* **Complex Document Handling**: Processes tables, figures, and structured data that traditional chatbots miss
+* **Multi-Document Synthesis**: Combines information from multiple sources for comprehensive answers
+* **Accuracy Assurance**: Self-correction mechanisms ensure response reliability and factual accuracy
+
+#### **Workflow Transformation**
+* **Research Efficiency**: Dramatically reduces time spent manually searching through document collections
+* **Decision Support**: Provides reliable information for critical business and research decisions  
+* **Quality Assurance**: Eliminates guesswork with fact-checked, verifiable responses
+* **Scalable Intelligence**: Handles large document volumes that would be impractical for manual review
+
+### 🔧 Project 9: Technology Stack
+
+#### **Core Technologies**
+* **Framework**: LangGraph for multi-agent workflow orchestration and state management
+* **Document Processing**: Docling for advanced PDF parsing and structured text extraction
+* **Vector Database**: ChromaDB for efficient document vectorization and similarity search
+* **Hybrid Retrieval**: BM25 + Dense retrieval combination for comprehensive search capabilities
+
+#### **AI and ML Components**
+* **LLM Integration**: Advanced language models for natural language understanding and generation
+* **Embedding Models**: State-of-the-art text embeddings for semantic document representation
+* **Verification Algorithms**: Custom fact-checking and hallucination detection mechanisms
+* **Self-Correction Logic**: Iterative improvement systems for response quality optimization
+
+#### **Interface and Deployment**
+* **Web Interface**: Gradio for intuitive document upload and query interaction
+* **API Architecture**: RESTful design for integration with existing enterprise systems
+* **Scalable Backend**: Designed for cloud deployment and horizontal scaling
+* **Performance Monitoring**: Comprehensive logging and analytics for system optimization
+
+#### **Educational and Research Value**
+* **Agentic RAG Implementation**: Practical demonstration of multi-agent RAG architecture
+* **Document Intelligence**: Advanced techniques for structured document processing and analysis
+* **Verification Systems**: Real-world implementation of AI response verification and quality control
+* **Production Patterns**: Enterprise-ready patterns for building reliable AI document systems
+
+#### **Future Extensions**
+* **Multi-Modal Processing**: Integration of image and chart analysis capabilities
+* **Real-Time Collaboration**: Multi-user document analysis and shared workspace features
+* **Advanced Analytics**: Document insight generation and automated report creation
+* **Enterprise Integration**: APIs for CRM, ERP, and other business system integration
+
 ## 🎯 Portfolio Capabilities Demonstrated
 
 ### **Advanced AI Integration**
@@ -755,8 +902,7 @@ agent = Agent[SupportResponse](
 
 ## 🚀 Future Enhancements & Project Expansion
 
-### **Planned Projects**
-* **Project 9**: Document Chat via Agentic RAG
+---
 
 ### **Portfolio Improvements**
 * **Cloud Deployment**: Platform deployment for broader accessibility
@@ -776,5 +922,9 @@ This expanding portfolio represents the successful integration of:
 The portfolio projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
 
 ---
+## Credit
+
+This comprehensive portfolio of nine multi-agent AI projects was developed as part of the IBM Cognitive Class Agentic AI course, building upon foundational coursework that covers essential concepts from basic agent architecture and tool calling through advanced multi-agent systems and workflow orchestration. The projects demonstrate practical application of the course's comprehensive curriculum, which includes interactive learning experiences, hands-on tool calling demonstrations, RAG and advanced multi-agent system design principles developed by the IBM Cognitive Class Agentic AI course development team.
+
 
 *This project portfolio exemplifies the practical application of advanced AI concepts, demonstrating proficiency in multi-agent systems, multimodal AI integration, tool calling frameworks, and modern application development practices across diverse problem domains.*
