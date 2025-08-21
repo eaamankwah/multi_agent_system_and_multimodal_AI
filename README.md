@@ -603,6 +603,130 @@ AutoMed represents a sophisticated **multi-agent healthcare consultation system*
 * **Integration Potential**: Foundation for connecting with external healthcare APIs and databases
 * **Customization Options**: Flexible agent role definitions for different medical specializations
 
+---
+
+## 📦 Project 8: Customer Support Agent with PydanticAI
+
+A production-ready **customer support chatbot system** built with PydanticAI that demonstrates the power of schema-first, type-safe AI agent development. This project showcases how to create reliable, structured AI agents that process customer support tickets with consistent, validated responses through Pydantic's robust data modeling and validation framework.
+
+### 🎯 Project 8: Key Features
+
+#### 🏗️ **Schema-First Architecture**
+* **Pydantic BaseModel Integration**: Strongly-typed response models ensuring consistent AI output structure
+* **Data Validation**: Automatic validation of AI responses with field-specific constraints and fallback handling
+* **Type Safety**: Complete type safety throughout the agent pipeline using Python's typing system
+* **Structured Output Control**: Guaranteed JSON response format eliminating unpredictable AI outputs
+
+#### 🎫 **Intelligent Ticket Processing**
+* **Multi-Field Matching**: Customer identification through ticket ID, email, or customer name matching
+* **Priority Classification**: Automatic assignment of low/medium/high priority levels with intelligent validation
+* **Category Detection**: Smart categorization of support issues (billing, technical, account, connectivity)
+* **Escalation Logic**: Boolean escalation decisions based on issue complexity and urgency
+
+#### 📊 **Real Dataset Integration**
+* **Kaggle Dataset Processing**: Integration with customer support ticket dataset from Kaggle
+* **CSV Data Handling**: Direct CSV file processing and querying within agent responses
+* **Customer Profile Matching**: Intelligent matching of user queries to existing customer records
+* **Historical Data Context**: Leveraging existing ticket data for informed response generation
+
+#### 🤖 **Advanced Agent Architecture**
+* **PydanticAI Framework**: Built on PydanticAI's agent-oriented design with OpenAI GPT-4.1-nano integration
+* **Dependency Injection**: Sophisticated dependency management using dataclass-based context passing
+* **Async Processing**: Full asynchronous processing with nest_asyncio support for Jupyter environments
+* **Mood-Based Extensions**: Extensible architecture demonstrated through mood-responsive recipe suggestions
+
+### 🗃️ Project 8: Technical Implementation
+
+#### **Core Agent Structure**
+```python
+class SupportResponse(BaseModel):
+    category: str = Field(..., description="The issue category")
+    priority: str = Field(default="low", description="Issue priority (low, medium, high)")
+    escalate: bool = Field(..., description="Should this be escalated to a human?")
+    suggested_response: str = Field(..., description="A helpful support reply")
+
+agent = Agent[SupportResponse](
+    instructions=f"""Customer support assistant with CSV data integration...""",
+    model="gpt-4.1-nano",
+    client=client,
+)
+```
+
+#### **Data Processing Pipeline**
+* **Customer Record Matching**: Intelligent fuzzy matching across multiple customer identifiers
+* **Response Validation**: Multi-level validation ensuring response quality and format consistency
+* **Error Handling**: Comprehensive exception handling with graceful degradation
+* **Conversation Management**: Persistent conversation state with exit condition handling
+
+### 🛠️ Project 8: Advanced Features
+
+#### **Pydantic V2 Validation System**
+* **Field Validators**: Custom validation logic with @field_validator decorators for priority normalization
+* **Type Coercion**: Automatic type conversion with intelligent fallbacks for invalid inputs
+* **Validation Modes**: Before/after validation modes ensuring data integrity at all processing stages
+* **Priority Mapping**: Intelligent priority-to-integer conversion for numerical analysis and sorting
+
+#### **Multi-Modal Agent Extensions**
+* **Recipe Suggestion Agent**: Demonstrates extensibility through mood-based recipe recommendations
+* **Dependency Injection**: Advanced context passing using dataclass-based dependency management
+* **System Prompt Decorators**: Dynamic system prompt generation based on user context and database lookups
+* **Async Database Integration**: Simulated database interactions with async/await patterns
+
+#### **Production-Ready Architecture**
+* **Environment Configuration**: Secure API key management with OpenAI client initialization
+* **Error Recovery**: Robust error handling for JSON parsing, validation errors, and API failures
+* **Conversation Loops**: Interactive chatbot implementation with clean exit mechanisms
+* **Response Formatting**: Professional output formatting with clear categorization and escalation indicators
+
+### 🧪 Project 8: Comprehensive Examples
+
+#### **Customer Support Scenarios**
+* **Authentication Issues**: Password reset requests with automatic escalation logic
+* **Hardware Problems**: Technical troubleshooting with priority assessment based on issue severity
+* **Billing Inquiries**: Subscription management with appropriate response categorization
+* **Connectivity Issues**: Network problem diagnosis with step-by-step resolution guidance
+
+#### **Extended Use Cases**
+* **Mood-Responsive Recipe Agent**: Emotional state-based cooking recommendations with dietary preference integration
+* **User Profile Management**: Dynamic user preference retrieval with database simulation
+* **Multi-Agent Coordination**: Framework for extending to multiple specialized support agents
+* **Real-Time Processing**: Live customer interaction with immediate response generation
+
+### 💼 Project 8: Business Applications
+
+#### **Customer Service Automation**
+* **24/7 Support Availability**: Continuous customer support without human intervention requirements
+* **Consistent Response Quality**: Standardized support responses eliminating human variation
+* **Escalation Efficiency**: Intelligent routing of complex issues to human agents
+* **Response Time Optimization**: Immediate initial responses with structured follow-up protocols
+
+#### **Scalability and Integration**
+* **Multi-Channel Support**: Extensible architecture for email, chat, phone, and social media integration
+* **CRM Integration**: Framework supporting integration with existing customer relationship management systems
+* **Analytics Integration**: Structured data output enabling comprehensive support analytics
+* **Knowledge Base Evolution**: Continuous learning from customer interactions and ticket resolutions
+
+### 🔧 Project 8: Technology Stack
+
+#### **Core Technologies**
+* **Framework**: PydanticAI 0.1.3 for type-safe agent development and structured output validation
+* **LLM Integration**: OpenAI GPT-4.1-nano for advanced natural language understanding and response generation
+* **Data Processing**: Pandas 2.2.3 for CSV data handling and customer record management
+* **Async Processing**: nest_asyncio for Jupyter notebook compatibility and async conversation handling
+
+#### **Advanced Features**
+* **Validation Framework**: Pydantic BaseModel with field validators and custom validation logic
+* **Type Safety**: Complete Python typing system integration with generic type support
+* **Error Management**: Comprehensive exception handling with ValidationError and JSONDecodeError coverage
+* **Development Environment**: Jupyter notebook compatibility with interactive chatbot testing capabilities
+
+#### **Educational Value**
+* **Schema-First Development**: Practical demonstration of type-safe AI agent development principles
+* **Production Patterns**: Real-world patterns for building reliable AI applications in production environments
+* **Framework Comparison**: Clear illustration of PydanticAI advantages over prompt-centric development approaches
+* **Extensibility Demonstration**: Concrete examples of extending basic agents to complex multi-modal applications
+
+---
 ## 🎯 Portfolio Capabilities Demonstrated
 
 ### **Advanced AI Integration**
@@ -632,7 +756,6 @@ AutoMed represents a sophisticated **multi-agent healthcare consultation system*
 ## 🚀 Future Enhancements & Project Expansion
 
 ### **Planned Projects**
-* **Project 8**: Customer Support Agent with PydanticAI
 * **Project 9**: Document Chat via Agentic RAG
 
 ### **Portfolio Improvements**
@@ -650,7 +773,7 @@ This expanding portfolio represents the successful integration of:
 * **Practical Application Development**: Real-world problem-solving across multiple domains
 * **User Experience Excellence**: Intuitive interface design and professional implementation
 
-The AI NourishBot, CrewAI Content Creation Pipeline, AI Math Assistant, Manual Tool-Calling Agent, Simple ReAct Agent, LangGraph Workflow Patterns and multiagent healhcare chatbot projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
+The portfolio projects collectively showcase the transformative potential of Agentic AI in creating intelligent, specialized solutions for diverse challenges, demonstrating both technical expertise and innovative thinking in the rapidly evolving field of artificial intelligence.
 
 ---
 
